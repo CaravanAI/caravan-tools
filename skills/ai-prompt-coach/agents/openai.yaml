@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Prompt Coach"
+  short_description: "Review AI sessions and turn traces into coaching."
+  default_prompt: "Review this AI session and coach me on how to improve it."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Ops Readout"
+  short_description: "Summarize AI usage, cost, quality, and risk from telemetry."
+  default_prompt: "Create an AI operations readout from this week's telemetry."

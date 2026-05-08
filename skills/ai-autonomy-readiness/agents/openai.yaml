@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Autonomy Readiness"
+  short_description: "Assess whether an AI workflow is ready for more autonomy."
+  default_prompt: "Assess whether this AI workflow is ready for more autonomy."

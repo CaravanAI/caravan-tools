@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Policy Monitor"
+  short_description: "Map AI policy questions to telemetry signals and exceptions."
+  default_prompt: "Help me turn our AI policy into telemetry checks."

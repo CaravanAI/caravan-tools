@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI OTEL Setup Advisor"
+  short_description: "Plan a practical OpenTelemetry setup for AI tools and agents."
+  default_prompt: "Help me design the first AI telemetry setup for my organization."

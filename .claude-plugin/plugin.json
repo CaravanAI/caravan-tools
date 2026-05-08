@@ -1,0 +1,9 @@
+{
+  "name": "ai-telemetry",
+  "description": "Skills for turning AI telemetry, logging, and OpenTelemetry traces into coaching, cost management, policy enforcement, and autonomy-readiness decisions.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Caravan",
+    "email": "team@caravan.ai"
+  }
+}

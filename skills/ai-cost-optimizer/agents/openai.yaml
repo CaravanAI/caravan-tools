@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Cost Optimizer"
+  short_description: "Analyze AI spend and find productive token-spend opportunities."
+  default_prompt: "Analyze this AI spend and show what to reduce or expand."

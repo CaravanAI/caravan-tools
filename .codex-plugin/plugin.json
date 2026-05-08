@@ -1,0 +1,22 @@
+{
+  "name": "ai-telemetry",
+  "version": "0.1.0",
+  "description": "Skills for turning AI telemetry, logging, and OpenTelemetry traces into coaching, cost management, policy enforcement, and autonomy-readiness decisions.",
+  "author": {
+    "name": "Caravan",
+    "email": "team@caravan.ai"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Telemetry",
+    "shortDescription": "Turn AI logs and traces into coaching, cost, policy, and autonomy decisions.",
+    "longDescription": "Skills for helping organizations move from AI enthusiasm to AI management by using telemetry, logging, and OpenTelemetry traces to understand adoption, cost, depth of use, quality, risk, and autonomy readiness.",
+    "developerName": "Caravan",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "brandColor": "#111827"
+  }
+}
