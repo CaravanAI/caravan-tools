@@ -1,26 +1,25 @@
-# AI Telemetry Plugin
+# Caravan Tools
 
-Public skill pack for turning AI telemetry, logging, and OpenTelemetry traces into better AI operations.
+Public plugin marketplace for Caravan tools.
 
-## What It Includes
+## Plugins
 
-- `ai-otel-setup-advisor`: design a practical first logging and OTEL rollout
-- `ai-ops-readout`: summarize adoption, cost, depth of use, quality, and risk
-- `ai-prompt-coach`: turn prompts, traces, and session histories into coaching
-- `ai-policy-monitor`: map AI policy into observable telemetry checks
-- `ai-cost-optimizer`: analyze productive token spend and cost per meaningful output
-- `ai-autonomy-readiness`: assess whether a workflow is ready for more AI autonomy
+- [`ai-telemetry`](./plugins/ai-telemetry): skills for turning AI telemetry, logging, and OpenTelemetry traces into coaching, cost management, policy enforcement, and autonomy-readiness decisions.
 
-## Public Sharing Notes
+## Marketplace Structure
 
-This folder is a standalone public version. It does not include Caravan's broader plugin marketplace, private configuration, secrets, traces, customer data, or internal operating files.
+This repository is formatted as a plugin marketplace:
 
-The skills are intentionally opinionated: AI telemetry should help organizations coach, cost, control, and improve AI use without turning the system into indiscriminate surveillance.
+- `.agents/plugins/marketplace.json` for Codex marketplace discovery
+- `.claude-plugin/marketplace.json` for Claude plugin marketplace discovery
+- `plugins/<plugin-name>/` for each installable plugin
+
+The `ai-telemetry` plugin includes both Codex and Claude plugin manifests.
 
 ## Validation
 
-Run the local eval:
+Run the plugin eval from the repository root:
 
 ```bash
-python3 evals/test_skill_pack.py
+python3 plugins/ai-telemetry/evals/test_skill_pack.py
 ```

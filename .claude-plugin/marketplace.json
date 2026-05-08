@@ -1,0 +1,22 @@
+{
+  "name": "caravan-tools",
+  "owner": {
+    "name": "Caravan",
+    "email": "team@caravan.ai"
+  },
+  "metadata": {
+    "description": "Public Caravan plugin marketplace for AI operations tools.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "ai-telemetry",
+      "source": "./plugins/ai-telemetry",
+      "description": "Skills for turning AI telemetry, logging, and OpenTelemetry traces into coaching, cost management, policy enforcement, and autonomy-readiness decisions.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Caravan"
+      }
+    }
+  ]
+}
