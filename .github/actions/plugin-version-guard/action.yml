@@ -1,0 +1,24 @@
+name: Plugin version guard
+description: >-
+  Fail a PR if a plugin's content changed without bumping its plugin.json
+  `version`. Shared by every CaravanAI plugin marketplace — the logic lives
+  here once and is consumed cross-repo via
+  `uses: CaravanAI/caravan-plugins/.github/actions/plugin-version-guard@main`.
+inputs:
+  base-sha:
+    description: Base SHA to diff against (pass the PR base SHA). Falls back to merge-base with origin/main.
+    required: false
+    default: ""
+  marketplace-check:
+    description: "warn | fail | off — when plugin.json bumps, also require the marketplace.json entry version to move."
+    required: false
+    default: warn
+runs:
+  using: composite
+  steps:
+    - name: Check plugin version bumps
+      shell: bash
+      env:
+        BASE_SHA: ${{ inputs.base-sha }}
+        MARKETPLACE_CHECK: ${{ inputs.marketplace-check }}
+      run: python3 "${{ github.action_path }}/check.py"
