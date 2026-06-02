@@ -1,6 +1,9 @@
 name: Plugin version guard
 
-# Consumes the shared guard from caravan-plugins (single source of truth).
+# Uses a VENDORED standalone copy of the guard (see
+# .github/actions/plugin-version-guard). Canonical source lives in
+# CaravanAI/caravan-plugins; cross-repo resolution of a private subpath
+# action returns "not found" even with permissive settings, so we vendor.
 # Runs on every PR (no path filter) so it's safe as a required status check.
 on:
   pull_request:
@@ -19,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: CaravanAI/caravan-plugins/.github/actions/plugin-version-guard@main
+      - uses: ./.github/actions/plugin-version-guard
         with:
           base-sha: ${{ github.event.pull_request.base.sha }}
           marketplace-check: warn
