@@ -23,3 +23,5 @@ Run the plugin eval from the repository root:
 ```bash
 python3 plugins/ai-telemetry/evals/test_skill_pack.py
 ```
+
+<!-- guard smoke test: cross-repo action resolution -->
