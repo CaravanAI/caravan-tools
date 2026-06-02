@@ -1,0 +1,25 @@
+name: Plugin version guard
+
+# Consumes the shared guard from caravan-plugins (single source of truth).
+# Runs on every PR (no path filter) so it's safe as a required status check.
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: plugin-version-guard-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: CaravanAI/caravan-plugins/.github/actions/plugin-version-guard@main
+        with:
+          base-sha: ${{ github.event.pull_request.base.sha }}
+          marketplace-check: warn
